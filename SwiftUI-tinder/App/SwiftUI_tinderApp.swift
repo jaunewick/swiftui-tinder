@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct SwiftUI_tinderApp: App {
+struct TinderApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
