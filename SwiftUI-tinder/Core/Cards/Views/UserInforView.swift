@@ -11,7 +11,7 @@ struct UserInforView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("Mega")
+                Text("Megan")
                     .font(.title)
                     .fontWeight(.heavy)
                 
