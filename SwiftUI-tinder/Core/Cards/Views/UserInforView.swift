@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct UserInforView: View {
+    let user: User
+
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("Megan")
+                Text(user.fullname)
                     .font(.title)
                     .fontWeight(.heavy)
                 
-                Text("37")
+                Text("\(user.age)")
                     .font(.title)
                     .fontWeight(.semibold)
                 
@@ -30,7 +32,7 @@ struct UserInforView: View {
                 }
             }
 
-            Text("Actress | Witch")
+            Text("Some test bio for now")
                 .font(.subheadline)
                 .lineLimit(2)
         }
@@ -43,5 +45,5 @@ struct UserInforView: View {
 }
 
 #Preview {
-    UserInforView()
+    UserInforView(user: MockData.users[1])
 }
