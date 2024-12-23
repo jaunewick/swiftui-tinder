@@ -11,30 +11,30 @@ struct MockData {
     static let users: [User] = [
         .init(
             id: NSUUID().uuidString,
-            fullname: "Megan Fox",
-            age: 37,
+            fullname: "Ana de Armas",
+            age: 36,
             profileImageURLs: [
-                "meganFox1",
-                "meganFox2"
+                "anaDeArmas1",
+                "anaDeArmas2",
+                "anaDeArmas3"
             ]
         ),
         .init(
             id: NSUUID().uuidString,
-            fullname: "David Beckham",
-            age: 37,
+            fullname: "John Wick",
+            age: 50,
             profileImageURLs: [
-                "davidBeckham1",
-                "davidBeckham2"
+                "johnWick1",
+                "johnWick2"
             ]
         ),
         .init(
             id: NSUUID().uuidString,
-            fullname: "Conor McGregor",
-            age: 37,
+            fullname: "Sydney Sweeney",
+            age: 27,
             profileImageURLs: [
-                "conorMcgregor1",
-                "conorMcgregor2",
-                "conorMcgregor3"
+                "sydneySweeney1",
+                "sydneySweeney2"
             ]
         ),
     ]
