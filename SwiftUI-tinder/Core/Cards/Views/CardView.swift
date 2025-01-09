@@ -26,7 +26,8 @@ struct CardView: View {
                     .overlay {
                         ImageScrollingOverlay(currentImageIndex: $currentImageIndex, imageCount: imageCount)
                     }
-                CardImageIndicatorView(currentImageIndex: currentImageIndex, imageCount: imageCount)
+                CardImageIndicatorView(currentImageIndex: currentImageIndex,
+                                       imageCount: imageCount)
                 SwipeActionIndicatorView(xOffset: $xOffset)
             }
 
@@ -60,17 +61,21 @@ private extension CardView {
         degrees = 0
     }
     func swipeRight() {
-        xOffset = 500
-        degrees = 12
-
-//        viewModel.removeCard(model)
+        withAnimation {
+            xOffset = 500
+            degrees = 12
+        } completion: {
+            viewModel.removeCard(model)
+        }
     }
 
     func swipeLeft() {
-        xOffset = -500
-        degrees = -12
-
-//        viewModel.removeCard(model)
+        withAnimation {
+            xOffset = -500
+            degrees = -12
+        } completion: {
+            viewModel.removeCard(model)
+        }
     }
 }
 
