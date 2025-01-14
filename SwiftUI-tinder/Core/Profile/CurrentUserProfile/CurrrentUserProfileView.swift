@@ -61,12 +61,12 @@ struct CurrrentUserProfileView: View {
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
             .fullScreenCover(isPresented: $showEditProfile) {
-                Text("Edit Profile")
+                EditProfileView(user: user)
             }
         }
     }
 }
 
 #Preview {
-    CurrrentUserProfileView(user: MockData.users[1])
+    CurrrentUserProfileView(user: MockData.users[0])
 }
